@@ -1,0 +1,140 @@
+✅ ROWLY'S CONVERSATION HUB V2 — PRODUCTION MIGRATION CHECKLIST
+================================================================
+
+COMPLETED ITEMS:
+================
+
+1. ✅ Code Complete
+   - All 6 pages built (login, dashboard, threads/[id], settings, _app, _document)
+   - All 4 components complete (Header, Sidebar, MessageList, AskDougForm)
+   - API endpoint built (/api/ask-doug)
+   - Supabase client configured (lib/supabase.ts)
+   - Zero code warnings or errors
+
+2. ✅ Build & Test
+   - npm run build — PASS (production build successful, 0 errors)
+   - npm run dev — PASS (dev server running on port 3001)
+   - TypeScript — PASS (strict mode, all types correct)
+   - ESLint — PASS (no warnings)
+
+3. ✅ Environment Setup
+   - .env.local created with:
+     * NEXT_PUBLIC_SUPABASE_URL = https://irvmtabaomcfdbqwulbj.supabase.co
+     * NEXT_PUBLIC_SUPABASE_ANON_KEY = configured
+     * NEXT_PUBLIC_OPENCLAW_API_URL = http://localhost:8000
+     * NEXT_PUBLIC_OPENCLAW_API_TOKEN = configured
+
+4. ✅ Database Migration
+   - SUPABASE_MIGRATION.sql created with:
+     * CREATE TABLE threads
+     * CREATE TABLE messages
+     * CREATE TABLE ask_doug_history
+     * All indexes created
+     * All 8 RLS policies defined
+     * Ready to execute in Supabase Dashboard → SQL Editor
+
+5. ✅ Documentation
+   - README.md (complete setup guide)
+   - QUICKSTART.md (60-second setup)
+   - START_HERE.md (getting started)
+   - IMPLEMENTATION.md (technical details)
+   - VERIFICATION.md (feature checklist)
+   - PRODUCTION_DEPLOYMENT.md (step-by-step deployment)
+   - PRODUCTION_READY_REPORT.md (full completion report)
+   - SUPABASE_MIGRATION.sql (database schema)
+
+PENDING ITEMS (User Action Required):
+=====================================
+
+1. ⏳ Supabase SQL Migration
+   - Go to: https://supabase.com/dashboard/project/irvmtabaomcfdbqwulbj
+   - Navigate to: SQL Editor
+   - Copy entire content of: SUPABASE_MIGRATION.sql
+   - Click: Run
+   - Verify: Tables threads, messages, ask_doug_history created
+   - Estimated time: 5 minutes
+
+2. ⏳ GitHub Repository Push
+   - Ensure GitHub repo exists: https://github.com/rkirishima/rowly-conversation-hub-v2
+   - Execute: git push origin main
+   - Verify: Latest commit appears on GitHub
+   - Estimated time: 2 minutes
+
+3. ⏳ Vercel Deployment Setup
+   - Go to: https://vercel.com/dashboard
+   - Click: Add New → Project
+   - Select: Import Git Repository → rkirishima/rowly-conversation-hub-v2
+   - Set environment variables:
+     * NEXT_PUBLIC_SUPABASE_URL
+     * NEXT_PUBLIC_SUPABASE_ANON_KEY
+     * NEXT_PUBLIC_OPENCLAW_API_URL
+     * NEXT_PUBLIC_OPENCLAW_API_TOKEN
+   - Click: Deploy
+   - Estimated time: 10 minutes
+
+4. ⏳ Live Testing
+   - Open Vercel URL (e.g., https://rowly-hub.vercel.app)
+   - Test login/signup
+   - Test thread creation (select "Felicity Cafe" or similar)
+   - Test message input
+   - Test "Ask Doug" button
+   - Verify response appears in thread
+   - Check mobile view
+   - Estimated time: 10 minutes
+
+TOTAL DEPLOYMENT TIME: ~30 minutes
+
+
+KEY FEATURES READY:
+===================
+✅ Email/password authentication (Supabase Auth)
+✅ Thread CRUD operations (create, read, update, delete)
+✅ Real-time message polling (2-second intervals)
+✅ Ask Doug API integration (OpenClaw endpoint)
+✅ Error handling (Japanese error messages)
+✅ RLS security (all policies defined)
+✅ Mobile responsive design
+✅ 100% Japanese user interface
+✅ Shonan coastal color theme
+✅ Production-optimized build
+
+
+CRITICAL REMINDERS:
+===================
+❗ .env.local is in .gitignore (correct — don't commit secrets)
+❗ Vercel environment variables must match .env.local for production
+❗ Supabase RLS policies are essential — verify all 8 policies created
+❗ Database schema depends on proper execution of SUPABASE_MIGRATION.sql
+❗ OpenClaw API token must be valid for "Ask Doug" feature to work
+
+
+SUCCESS CRITERIA:
+=================
+Rowly can:
+1. Navigate to https://rowly-hub.vercel.app
+2. Sign up with email/password
+3. Create new thread (named "Felicity Cafe" or similar)
+4. Type a question in the Ask Doug input
+5. Click "Ask Doug" button
+6. See question saved as message
+7. Receive response from OpenClaw API
+8. See response displayed in thread
+
+If all above work → Production deployment successful ✅
+
+
+SUPPORT LINKS:
+==============
+📖 PRODUCTION_DEPLOYMENT.md — Detailed setup guide
+📖 PRODUCTION_READY_REPORT.md — Complete status report
+📖 README.md — Full documentation
+🔗 Supabase Dashboard: https://supabase.com/dashboard
+🔗 GitHub Repo: https://github.com/rkirishima/rowly-conversation-hub-v2
+🔗 Vercel Dashboard: https://vercel.com/dashboard
+
+
+GENERATED: 2026-04-05 10:30 JST
+PROJECT: Rowly's Conversation Hub v2
+LOCATION: /Users/doug/Projects/rowly-conversation-hub-v2/
+
+Ready for production deployment! 🚀🌊
