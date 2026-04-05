@@ -8,14 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Shonan/海 (Sea) Color Palette
+        // Shonan Coastal Theme
         'shonan': {
-          'navy': '#001f3f',      // 深紺 (Deep Navy)
-          'teal': '#0db4d4',      // 青緑 (Teal)
-          'sky': '#1da3d8',       // 空色 (Sky Blue)
-          'white': '#f8f9fa',     // 白 (White)
-          'sand': '#e8dcc8',      // 砂色 (Sand)
-          'dark': '#1a2332',      // 濃い灰 (Dark Gray)
+          'navy': '#0D3B66',      // Primary Navy
+          'teal': '#1E5F74',      // Secondary Teal
+          'sky': '#7BA7BC',       // Accent Sky
+          'sand': '#EAD7BB',      // Background Sand
+          'sand-light': '#F5F3EE', // Light Sand
+          'text-dark': '#2C2C2C', // Text Dark
+          'divider': '#D4D0C8',   // Divider
         },
       },
       backgroundImage: {
